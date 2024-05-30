@@ -13,6 +13,46 @@
     color: var(--main-color);
 }
 
+/****** En-tête ***********/
+header {
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    align-items: center; /* Alignement vertical centré */
+    padding: 20px 0;
+    background-color: #ffffff;
+}
+
+header .logo img {
+    height: 50px; /* Ajustez la taille de l'image du logo selon vos besoins */
+}
+
+header .navigation ul {
+    list-style: none; /* Supprime les puces de liste */
+    display: flex; /* Utilisation de Flexbox pour les éléments de navigation */
+    gap: 20px; /* Espace entre les éléments de la navigation */
+    margin: 0;
+    padding: 0;
+}
+
+header .navigation li {
+    margin: 0;
+}
+
+header .navigation a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: var(--main-color);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .navigation a:hover {
+    background-color: var(--filter-bg-color); /* Couleur de fond au survol */
+    border: 1px solid var(--main-color); /* Bordure au survol */
+}
+/******Fin En-tête*****/
+
 body {
     display: flex;
     justify-content: center;
