@@ -9,7 +9,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #FFFFFF;
-    --section-bg-color: #e0e0e0;
+    --section-bg-color:#F2F2F2;
     --card-bg-color: #ffffff;
     --button-color: #007BFF;
     --input-bg-color: #ffffff;
@@ -202,17 +202,17 @@ header .navigation a:hover::before {
 }
 
 .filter-button:hover {
-    background-color: #E0E0E0;
+    background-color: #DEEBFF;
     color: #000000;
 }
 
 .filter-button.selected {
-    background-color: #E0E0E0;
-    color: #000000;
+    background-color: #DEEBFF;
+    color: #DEEBFF;
 }
 
 .filter-button.selected i {
-    color: #0065FC;
+    color: #000000;
 }
 
 /* Info Bar Section */
@@ -559,17 +559,19 @@ footer {
     }
 
     .filters-container {
-        flex-direction: column; /* Stack filters vertically */
-        align-items: flex-start; /* Left align filters */
-        gap: 10px;
+        display: flex;
+        flex-direction: column; /* Empile les éléments verticalement */
+        align-items: flex-start; /* Aligne les éléments à gauche */
+        gap: 10px; /* Espace entre les éléments */
     }
-    
+
+    .filters-label {
+        margin-bottom: 10px; /* Ajoute un espace en dessous du label */
+    }
+
     .filters {
-        flex-direction: row; /* Stack filters horizontally */
-        align-items: center; /* Center align filters */
-        flex-wrap: wrap; /* Allow wrapping to multiple lines */
-        justify-content: flex-start; /* Align filters to the left */
-        gap: 10px;
+        flex-wrap: wrap; /* Permet aux boutons de se répartir sur plusieurs lignes si nécessaire */
+        gap: 10px; /* Ajoute un espace entre les boutons */
     }
 
     .filter-button {
@@ -633,10 +635,15 @@ footer {
         object-fit: cover;
     }
 
-    .search-form, .filters, .info-bar {
+     .filters, .info-bar {
         width: 100%;
         margin: 0;
         padding: 0 10px;
+    }
+
+    .search-form {
+        width: 100%;
+        margin: 0;
     }
 
     header {
@@ -676,7 +683,6 @@ footer {
         padding: 10px 0;
         display: block;
     }
-
     .navigation a::after {
         content: '';
         position: absolute;
@@ -688,7 +694,12 @@ footer {
         transform: translateX(-50%);
         transition: width 0.3s;
     }
-
+    header .navigation a:focus::before,
+    header .navigation a:hover::before,
+    header .navigation a:active::before {
+        width: 0; /* Désactive le trait lors du clic */
+        transition: none; /* Supprime toute animation */
+    }
     .navigation a:hover::after,
     .navigation a:focus::after,
     .navigation a.active::after {
@@ -717,7 +728,7 @@ footer {
 
     .search-form .search-button {
         padding: 10px;
-        border-radius: 15px;
+        border-radius: 15px 15px 15px 15px;
         display: flex;
         align-items: center;
         justify-content: center;
