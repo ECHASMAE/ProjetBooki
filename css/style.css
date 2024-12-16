@@ -259,7 +259,7 @@ header .navigation a:hover::before {
 
 .hebergement-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     gap: 20px;
 }
 
@@ -715,7 +715,7 @@ footer {
     .search-form {
         width: 100%;
         flex-direction: row;
-        border-radius: 25px;
+        border-radius: 15px;
     }
 
     .search-form .search-icon {
