@@ -503,7 +503,7 @@ footer {
 /* Media queries */
 
 /* Tablette */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
 
    
     .hebergements-and-populaires {
@@ -582,7 +582,7 @@ footer {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     body {
         margin: 0;
         padding: 0;
